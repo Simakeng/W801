@@ -1,2 +1,12 @@
 .vscode/*
 *.cdkproj
+*.exe
+*.a
+*.bin
+*.img
+*.map
+*.bin.gz
+*.fls
+*.o
+*.elf
+*.d

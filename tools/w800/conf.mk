@@ -66,7 +66,6 @@ VERBOSE ?= NO
 UNAME_O:=$(shell uname -o)
 UNAME_S:=$(shell uname -s)
 
-$(shell gcc $(SDK_TOOLS)/wm_getver.c -Wall -O2 -o $(VER_TOOL))
 
 TOOL_CHAIN_PREFIX = $(CONFIG_W800_TOOLCHAIN_PREFIX)
 TOOL_CHAIN_PATH = $(subst ",,$(CONFIG_W800_TOOLCHAIN_PATH))

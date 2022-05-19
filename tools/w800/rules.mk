@@ -100,7 +100,7 @@ else
 endif
 	@echo "build finished!"
 
-all: .subdirs $(OBJS) $(OLIBS) $(OIMAGES) $(OBINS)
+all: $(VER_TOOL) $(WM_TOOL) .subdirs $(OBJS) $(OLIBS) $(OIMAGES) $(OBINS)
 
 help:
 	@echo  'Cleaning targets:'
@@ -176,6 +176,10 @@ sinclude $(DEPS)
 endif
 endif
 endif
+
+$(SDK_TOOLS)/%: $(SDK_TOOLS)/%.c
+	@echo "HOSTCC $<"
+	@gcc $< -Wall -O2 -o $@
 
 $(OBJODIR)/$(subdir_path)/%.o: %.c
 	@mkdir -p $(OBJODIR)/$(subdir_path)
